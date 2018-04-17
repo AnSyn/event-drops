@@ -16,6 +16,7 @@ export default (config, xScale) => selection => {
 			onMouseOver,
 			onMouseOut,
 			onDblClick,
+			dropClass,
 			dropId
 		},
 	} = config;
@@ -28,13 +29,14 @@ export default (config, xScale) => selection => {
 	drops
 		.enter()
 		.append('circle')
-		.classed('drop', true)
+		.attr('class', 'drop')
 		.attr('r', dropRadius)
 		.attr('fill', dropColor)
 		.on('click', onClick)
 		.on('mouseover', onMouseOver)
 		.on('mouseout', onMouseOut)
 		.on('dblclick', onDblClick)
+
 		.merge(drops)
 		.attr('id', dropId)
 		.attr('cx', d => xScale(dropDate(d)));

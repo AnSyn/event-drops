@@ -31,6 +31,7 @@ export interface EventDropConfiguration {
 		onMouseOut?: Function,
 		onDblClick?: Function,
 		dropId?: Function,
+		dropClass? : Function
 		filterOverlap?: boolean
 	},
 	label?: {
@@ -48,9 +49,9 @@ export interface EventDropConfiguration {
 		bottom?: number,
 		left?: number,
 	},
-	range?: {
-		start?: Date
-		end?: Date,
+	range: {
+		start: Date
+		end: Date,
 	},
 	zoom?: {
 		onZoomStart?: Function,
@@ -100,6 +101,7 @@ export default d3 => ({
 		},
 		dropId: () => {
 		},
+		dropClass: () => {},
 		filterOverlap: true
 	},
 	label: {
