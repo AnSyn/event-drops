@@ -32,7 +32,7 @@ export default (config, xScale) => selection => {
 		.attr('class', 'drop')
 		.attr('r', dropRadius)
 		.attr('fill', dropColor)
-		.on('click', onClick)
+		.on('mousedown', onClick)
 		.on('mouseover', onMouseOver)
 		.on('mouseout', onMouseOut)
 		.on('dblclick', onDblClick)
