@@ -10,7 +10,7 @@ import { addMetaballsDefs } from './metaballs';
 import './style.css';
 import { withinRange } from './withinRange';
 import { addHighLight } from './highlightFilter';
-
+import shapes from './shapes';
 
 // do not export anything else here to keep window.eventDrops as a function
 export default ({ d3 = window['d3'], ...customConfiguration }) => {
@@ -109,6 +109,7 @@ export default ({ d3 = window['d3'], ...customConfiguration }) => {
 		selection
 			.data(filteredData)
 			.call(dropLine(config, scale))
+            .call(shapes(config, scale))
 			.call(bounds(config, scale))
 			.call(axis(d3, config, scale));
 	};
