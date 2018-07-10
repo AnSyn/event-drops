@@ -22,7 +22,7 @@
     "dist/**/*",
     "style.css"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "d3": "^5.5.0",
     "lodash": "^4.17.10"
   },
