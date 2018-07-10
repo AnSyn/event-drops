@@ -6,8 +6,6 @@ import defaultConfiguration from './config';
 import dropLine from './dropLine';
 import zoom from './zoom';
 import { addMetaballsDefs } from './metaballs';
-
-import './style.css';
 import { withinRange } from './withinRange';
 import { addHighLight } from './highlightFilter';
 import shapes from './shapes';

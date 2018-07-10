@@ -7,8 +7,9 @@ export default (config, xScale) => selection => {
 
 	} = config;
 
-	const bounds = selection.selectAll('.bound').data(d => d);
-	let boundsLabelLocation;
+	const bounds = selection.selectAll('.bound');
+	const dataBounds = bounds.data(d => d);
+    let boundsLabelLocation;
 	if (location) {
 		boundsLabelLocation = location;
 	}
@@ -16,7 +17,7 @@ export default (config, xScale) => selection => {
 		boundsLabelLocation = lineHeight * selection.data()[0].length + margin.top;
 	}
 
-	bounds
+    dataBounds
 		.enter()
 		.append('g')
 		.classed('bound', true)
@@ -28,7 +29,7 @@ export default (config, xScale) => selection => {
 		.append('text')
 		.text(dateFormat(xScale.domain()[0]));
 
-	bounds
+    dataBounds
 		.enter()
 		.append('g')
 		.classed('bound', true)
