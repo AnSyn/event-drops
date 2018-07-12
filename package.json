@@ -1,7 +1,7 @@
 {
   "name": "@ansyn/event-drops",
   "version": "1.0.0",
-  "description": "\"# new-ansyn-eventDrops\"",
+  "description": "\" ansyn event-drops \"",
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist && tsc",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnSyn/new-ansyn-eventDrops.git"
+    "url": "git+https://github.com/AnSyn/event-drops.git"
   },
   "author": "ansyn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AnSyn/new-ansyn-eventDrops/issues"
+    "url": "https://github.com/AnSyn/event-drops/issues"
   },
-  "homepage": "https://github.com/AnSyn/new-ansyn-eventDrops#readme",
+  "homepage": "https://github.com/AnSyn/event-drops#readme",
   "files": [
     "dist/**/*",
     "style.css"
