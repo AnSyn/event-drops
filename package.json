@@ -1,6 +1,6 @@
 {
   "name": "@ansyn/event-drops",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "\" ansyn event-drops \"",
   "main": "dist/index.js",
   "scripts": {
