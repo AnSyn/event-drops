@@ -22,7 +22,6 @@ export default (function (config: any, xScale: any) {
             .attr('height', config.line.height)
             .attr('fill', 'transparent');
 
-        shapeLines.selectAll('.shape').call(shape(config, xScale));
         shapeLines.exit().remove();
     };
 });
