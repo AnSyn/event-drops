@@ -9,6 +9,8 @@ export default (config, xScale) => selection => {
 
 	const bounds = selection.selectAll('.bound');
 	const dataBounds = bounds.data(d => d);
+	const startTimeString = dateFormat(xScale.domain()[0]).toString();
+	const endTimeString = dateFormat(xScale.domain()[1]).toString();
     let boundsLabelLocation;
 	if (location) {
 		boundsLabelLocation = location;
@@ -27,7 +29,7 @@ export default (config, xScale) => selection => {
 			`translate(${labelWidth}, ${boundsLabelLocation})`
 		)
 		.append('text')
-		.text(dateFormat(xScale.domain()[0]));
+		.text(startTimeString);
 
     dataBounds
 		.enter()
@@ -41,8 +43,8 @@ export default (config, xScale) => selection => {
 		.append('text')
 		.attr('x', xScale.range()[1] - margin.right)
 		.attr('text-anchor', 'end')
-		.text(dateFormat(xScale.domain()[1]));
+		.text(endTimeString);
 
-	bounds.selectAll('.bound.start text').text(dateFormat(xScale.domain()[0]));
-	bounds.selectAll('.bound.end text').text(dateFormat(xScale.domain()[1]));
+	bounds.selectAll('.bound.start text').text(startTimeString);
+	bounds.selectAll('.bound.end text').text(endTimeString);
 };
